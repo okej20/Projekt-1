@@ -2,6 +2,10 @@
 #define PROJEKT1_H
 
 #include <QMainWindow>
+#include<QtSql>
+#include <QSqlDatabase>
+
+#include "logowanie.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Projekt1; }
@@ -14,19 +18,15 @@ class Projekt1 : public QMainWindow
 public:
     Projekt1(QWidget *parent = nullptr);
     ~Projekt1();
+    void openNewWindow();
 
 private slots:
 
 
 
 
-    void on_Data_userDateChanged(const QDate &date);
 
-    void on_RodzajDonacji_currentIndexChanged(const QString &arg1);
 
-    void on_Odznaka_currentIndexChanged(const QString &arg1);
-
-    void on_progressBar_valueChanged(int value);
 
     void on_lineEdit_textEdited(const QString &arg1);
 
@@ -36,11 +36,32 @@ private slots:
 
     void on_pushButton_clicked();
 
-    void on_spinBox_valueChanged(int arg1);
+
+
+    void on_progressBar_valueChanged(int value);
+
+    void on_stopien1_clicked();
+
+
+
+
+
+
+
+
+
+    void on_stopien2_clicked();
+
+    void on_stopien3_clicked();
+
+    void on_stopien_narod_clicked();
+
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::Projekt1 *ui;
-
+   logowanie *WLogowanie;
     enum Operation
     {
        liczosocze,
@@ -51,6 +72,8 @@ private:
 
 
     };
+
+
     int n;
     int m;
     int o;
