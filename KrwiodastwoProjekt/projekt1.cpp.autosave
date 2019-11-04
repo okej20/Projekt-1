@@ -12,7 +12,7 @@ Projekt1::Projekt1(QWidget *parent)
     Osocze = 0;
     Krewpelna = 0;
     Plytkikrwi = 0;
-    WLogowanie = new logowanie(); // Be sure to destroy your window somewhere
+    WLogowanie = new logowanie(); 
     WLogowanie->setWindowFlags(Qt::WindowStaysOnTopHint);
     WLogowanie->show();
     WLogowanie->activateWindow();
@@ -112,11 +112,6 @@ void Projekt1::on_Kalendarz_activated(const QDate &date)
 }
 
 void Projekt1::on_Kb_clicked()
-{
-
-}
-
-void Projekt1::on_pushButton_3_clicked()
 {
 
 }

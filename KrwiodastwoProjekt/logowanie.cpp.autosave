@@ -5,6 +5,8 @@ logowanie::logowanie(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::logowanie)
 {
+ 
+     setWindowTitle( tr("Login") );
     ui->setupUi(this);
 }
 
@@ -25,5 +27,4 @@ void logowanie::on_pushButton_clicked()
      bool ok = db.open();
      if(db.open()){ QMessageBox::information(this, "Connection", "Database connect sucesfull");}
      else {QMessageBox::information(this, "Not connection", "Database connect unsucesfull");}
-
 }

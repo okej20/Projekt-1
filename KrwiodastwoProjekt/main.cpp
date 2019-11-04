@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     db.setUserName("root");
     db.setPassword("");
     db.setDatabaseName("project");
-    db.open();
+    bool ok = db.open();
 
 
 
